@@ -22,8 +22,11 @@ window.createPost = createPost;
 
 export function updatePost() {
     return {
-
-    }
+        type: ACTION_DELETE_POST,
+        payload: {
+            id
+        }
+    };
 
 }
 
