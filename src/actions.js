@@ -30,6 +30,8 @@ export function updatePost() {
 
 }
 
+window.deletePost = deletePost;
+
 
 export function deletePost() {
     return {
