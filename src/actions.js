@@ -11,7 +11,6 @@ export function createPost(payload) {
     //  title: 'lorem ipsum',
     //  content: 'blah blah blah',
     // }
-    
     return {
         type: ACTION_CREATE_POST,
         payload
@@ -20,21 +19,26 @@ export function createPost(payload) {
 
 window.createPost = createPost;
 
-export function updatePost() {
+export function deletePost(id) {
     return {
         type: ACTION_DELETE_POST,
         payload: {
             id
         }
+    }
+}
+window.deletePost = deletePost;
+
+
+export function updatePost(id, payload) {
+    return {
+    type: ACTION_UPDATE_POST,
+    payload: {
+        id,
+        ...payload
+    }
     };
 
 }
 
-window.deletePost = deletePost;
-
-
-export function deletePost() {
-    return {
-
-    }
-}
+window.updatePost = updatePost;
