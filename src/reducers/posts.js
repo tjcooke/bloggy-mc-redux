@@ -3,11 +3,15 @@ import {
 } from '../actions'
 
 
-export function posts(state={}, action={type: ''}) {
+export default function posts(state={}, action={type: ''}) {
 
     switch(action.type) {
         case ACTION_CREATE_POST:
         // create a post! 
+        console.log(`Sounds like you wanna create a post`)
+        break;
+        default:
+            return state;
         break;
     }
 }
